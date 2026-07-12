@@ -30,4 +30,4 @@ def recommendation_tool(title):
     for i in scores[1:6]:
         recommendations.append(df.iloc[i[0]]["title"])
 
-    return recommendations
+    return list(dict.fromkeys(recommendations))

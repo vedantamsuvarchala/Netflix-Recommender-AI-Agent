@@ -1,0 +1,53 @@
+.stApp {
+    background-color: #141414;
+    color: white;
+
+}
+
+h1 {
+    color: #E50914;
+    text-align: center;
+}
+
+.stButton > button {
+    background-color: #E50914;
+    color: white;
+    border-radius: 10px;
+    height: 45px;
+    width: 100px;
+    font-size: 18px;
+}
+
+.stTextInput > div > div > input {
+    background-color: #222222;
+    color: white;
+}
+
+div[data-testid="stMetric"] {
+    background-color: #202020;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/*Dashboard Cards*/
+div[data-testid="stMetric"]{
+    background:!1f1f1f;
+    border:1px solid #333;
+    border-radius:15px;
+    padding:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,.35);
+}
+
+/* Chart Containers */
+[data-testid="stPlotlyChart"]{
+    background:#1b1b1b;
+    padding:12px;
+    border-radius:15px;
+    border:1px solid #333;
+    margin-bottom:20px;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"]{
+    background:#0f0f0f;
+}
