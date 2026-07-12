@@ -1,12 +1,14 @@
 import os
 import requests
 from dotenv import load_dotenv
+from functools import lru_cache
+
 
 load_dotenv()
 
 API_KEY = os.getenv("TMDB_API_KEY")
 
-
+@lru_cache(maxsize=100)
 def get_movie_poster(movie_name):
 
     url = "https://api.themoviedb.org/3/search/movie"
@@ -35,6 +37,7 @@ def get_movie_poster(movie_name):
     return f"https://image.tmdb.org/t/p/w500{poster_path}"
 
 
+@lru_cache(maxsize=100)
 def get_movie_trailer(movie_name):
 
     url = "https://api.themoviedb.org/3/search/movie"

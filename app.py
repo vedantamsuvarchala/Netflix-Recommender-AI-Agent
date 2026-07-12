@@ -258,14 +258,14 @@ with tab3:
 </a>
 """,
     
-    unsafe_allow_html=True,
-)
+            unsafe_allow_html=True,
+            )
 
-if trailer:
-    st.link_button("▶️ Watch Trailer", trailer)
+            if trailer:
+                st.link_button("▶️ Watch Trailer", trailer)
 
-    st.markdown("---")
-    st.subheader("🎯 Similar Recommendations")
+            st.markdown("---")
+            st.subheader("🎯 Similar Recommendations")
 
     for movie in response:
             st.markdown(f"""
@@ -279,6 +279,13 @@ border-left:5px solid #E50914;">
 🎬 {movie}
 </div>
 """, unsafe_allow_html=True)
+            
+st.subheader("🍿 Watch Now")
+
+st.info(
+    "Availability depends on your region. "
+    "Click IMDb for streaming information and providers."
+)
             
    
 
